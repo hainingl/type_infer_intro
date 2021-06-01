@@ -41,4 +41,6 @@ object People extends App {
   // method 2 sql with table
   dfCsv.createGlobalTempView("people")
   spark.sql("SELECT name, age FROM global_temp.people WHERE age BETWEEN 19 AND 31").show()
+
+  spark.stop();
 }
