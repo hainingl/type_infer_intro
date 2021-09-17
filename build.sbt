@@ -8,6 +8,9 @@ libraryDependencies += "org.apache.spark" %% "spark-sql" % "3.1.1"
 // https://mvnrepository.com/artifact/org.apache.spark/spark-core
 libraryDependencies += "org.apache.spark" %% "spark-core" % "3.1.1"
 
+// https://mvnrepository.com/artifact/com.h2database/h2
+libraryDependencies += "com.h2database" % "h2" % "1.4.195" % Test
+
 idePackagePrefix := Some("org.hnl")
 
 resolvers += "Akka Repository" at "https://repo.akka.io/releases/"

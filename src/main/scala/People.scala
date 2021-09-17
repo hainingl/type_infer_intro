@@ -1,4 +1,4 @@
-package org.hnl
+//package org.hnl
 
 
 object People extends App {
@@ -11,6 +11,7 @@ object People extends App {
     .config("spark.master", "local")
     .getOrCreate()
 
+
   showCsv()
 
 //  showJson()
@@ -18,6 +19,7 @@ object People extends App {
   spark.stop();
 
   def showCsv(): Unit = {
+    println("CSV ---- ")
     // For implicit conversions like converting RDDs to DataFrames
     import spark.implicits._
     val dfCsv = spark
@@ -42,6 +44,7 @@ object People extends App {
   }
 
   def showJson(): Unit = {
+    println("JSON ---- ")
     val dfJson = spark.read.json("src/main/resources/people.json")
     //     Displays the content of the DataFrame to stdout
     dfJson.show()
